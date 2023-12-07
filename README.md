@@ -8,6 +8,11 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/313c723c915c787826eb/test_coverage)](https://codeclimate.com/github/PetrLomaev/frontend-project-46/test_coverage)
 
 
-View the recording gendiff at:
+View the recording gendiff flat file1.json file2.json at:
 
 [![asciicast](https://asciinema.org/a/624803.svg)](https://asciinema.org/a/624803)
+
+
+View the recording gendiff flat file1.yaml file2.yaml at:
+
+[![asciicast](https://asciinema.org/a/625742.svg)](https://asciinema.org/a/625742)
