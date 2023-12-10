@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import getParser from './parsers.js';
 
-const genDiff = (path1, path2) => {
+const genStylish = (path1, path2) => {
   const data1 = getParser(path1);
 
   const data2 = getParser(path2);
@@ -15,6 +15,20 @@ const genDiff = (path1, path2) => {
 
   const keys = (_.union(keys1, keys2)).sort();
 
+  const showValue = (node) => {
+    const anotherKey = Object.values(node);
+    console.log('anotherKey', anotherKey);
+    const filtered = anotherKey.map((elem) => {
+      if (typeof elem !== 'object') {
+        return elem;
+      }
+      return showValue(elem);
+    });
+    console.log('filtered', filtered);
+  };
+  showValue(copyOfData1);
+  
+  /*
   const mapped = keys.map((key) => {
     if (!Object.hasOwn(data1, key)) {
       return `  + ${key}: ${data2[key]}`;
@@ -27,8 +41,8 @@ const genDiff = (path1, path2) => {
   });
   const result = `{\n${mapped.join('\n')}\n}`;
   console.log(result);
-
   return result;
+  */
 };
 
-export default genDiff;
+export default genStylish;
