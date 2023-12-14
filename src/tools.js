@@ -5,7 +5,7 @@ const getDiffObject = (obj1, obj2) => {
 
   const keys2 = Object.keys(obj2);
 
-  const keys = (_.union(keys1, keys2)).sort();
+  const keys = _.sortBy(_.union(keys1, keys2));
   const mapped = keys.map((key) => {
     const oldValue = obj1[key];
     const newValue = obj2[key];
@@ -27,7 +27,7 @@ const getDiffObject = (obj1, obj2) => {
       return {
         type: 'deep',
         key,
-        child: getDiffObject(oldValue, newValue),
+        children: getDiffObject(oldValue, newValue),
       };
     }
     if (obj1[key] !== obj2[key]) {
