@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { program } from 'commander';
 import genDiff from '../src/index.js';
-import genStylish from '../src/stylish.js';
+// import genStylish from '../src/stylish.js';
 
 program
   .name('gendiff')
@@ -11,6 +11,6 @@ program
   .argument('<filepath1>')
   .argument('<filepath2>')
   .action((filepath1, filepath2) => {
-    genStylish(filepath1, filepath2);
+    genDiff(filepath1, filepath2);
   })
   .parse(process.argv);
