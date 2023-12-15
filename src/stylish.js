@@ -13,7 +13,7 @@ const stringify = (value, layer) => {
     if (!_.isObject(currentValue)) {
       return `${currentValue}`;
     }
-    const lines = Object.entries(currentValue).map(([key, val]) => `${getSpace(depth + 1)}${key}: ${iter(val, depth + 1)}`);
+    const lines = Object.entries(currentValue).map(([key, val]) => `${getSpace(depth + 1)}    ${key}: ${iter(val, depth + 1)}`);
     return ['{', ...lines, `${getSpace(depth + 1)}}`].join('\n');
   };
   return iter(value, layer);
@@ -26,7 +26,7 @@ const genStylish = (tree) => {
         return `${getSpace(depth)}  - ${value.key}: ${stringify(value.oldValue, depth)}`;
       } if (value.type === 'added') {
         return `${getSpace(depth)}  + ${value.key}: ${stringify(value.newValue, depth)}`;
-      } if (value.type === 'deep') {
+      } if (value.type === 'nested') {
         return `${getSpace(depth)}    ${value.key}: ${iter(value.children, depth + 1)}`;
       } if (value.type === 'changed') {
         return `${getSpace(depth)}  - ${value.key}: ${stringify(value.oldValue, depth)}\n${getSpace(depth)}  + ${value.key}: ${stringify(value.newValue, depth)}`;

@@ -16,3 +16,9 @@ View the recording gendiff flat file1.json file2.json at:
 View the recording gendiff flat file1.yaml file2.yaml at:
 
 [![asciicast](https://asciinema.org/a/625742.svg)](https://asciinema.org/a/625742)
+
+
+View the recording gendiff nested file1.yaml file2.yaml at:
+
+[![asciicast](https://asciinema.org/a/627007.svg)](https://asciinema.org/a/627007)
+

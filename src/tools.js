@@ -25,7 +25,7 @@ const getDiffObject = (obj1, obj2) => {
     }
     if (_.isObject(oldValue) && _.isObject(newValue)) {
       return {
-        type: 'deep',
+        type: 'nested',
         key,
         children: getDiffObject(oldValue, newValue),
       };
@@ -44,7 +44,6 @@ const getDiffObject = (obj1, obj2) => {
       oldValue,
     };
   });
-  // console.log(JSON.stringify(mapped, null, 2));
   return mapped;
 };
 
