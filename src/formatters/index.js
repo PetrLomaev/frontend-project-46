@@ -7,6 +7,8 @@ const diffToFormat = (tree, formatName = 'stylish') => {
       return genStylish(tree);
     case 'plain':
       return genPlain(tree);
+    case 'json':
+      return JSON.stringify(tree);
     default:
       throw new Error('Undefined format');
   }

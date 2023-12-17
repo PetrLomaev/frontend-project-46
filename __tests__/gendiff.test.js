@@ -13,4 +13,6 @@ test('flat file test', () => {
   expect(genDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'))).toEqual(readFile('file1-2nested_stylish_result.yml'));
   expect(genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'plain')).toEqual(readFile('file1-2nested_plain_result.yml'));
   expect(genDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'), 'plain')).toEqual(readFile('file1-2nested_plain_result.yml'));
+  expect(genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'), 'json')).toEqual(readFile('file1-2nested_json_result.yml'));
+  expect(genDiff(getFixturePath('file1.yaml'), getFixturePath('file2.yaml'), 'json')).toEqual(readFile('file1-2nested_json_result.yml'));
 });

@@ -27,3 +27,8 @@ View the recording gendiff nested file1.yaml file2.yaml with plain-format at:
 
 [![asciicast](https://asciinema.org/a/627213.svg)](https://asciinema.org/a/627213)
 
+
+View the recording gendiff nested file1.yaml file2.yaml with json-format at:
+
+[![asciicast](https://asciinema.org/a/627339.svg)](https://asciinema.org/a/627339)
+
