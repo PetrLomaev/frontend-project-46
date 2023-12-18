@@ -9,7 +9,7 @@ const getParser = (filepath) => {
   } if (format === '.yml' || format === '.yaml') {
     return yaml.load(fs.readFileSync(path.resolve(filepath), 'utf-8'));
   }
-  throw new Error('Unknown format');
+  throw new Error(`Unknown format: '${format}'`);
 };
 
 export default getParser;

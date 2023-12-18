@@ -5,10 +5,10 @@
     "gendiff": "bin/gendiff.js"
   },
   "type": "module",
-  "description": "[![Actions Status](https://github.com/PetrLomaev/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/PetrLomaev/frontend-project-46/actions)",
+  "description": "Node.js gendiff package",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

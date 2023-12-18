@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 import { program } from 'commander';
 import genDiff from '../src/index.js';
-// import genStylish from '../src/stylish.js';
 
 program
   .name('gendiff')

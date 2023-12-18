@@ -22,16 +22,18 @@ const stringify = (value, layer) => {
 const genStylish = (tree) => {
   const iter = (obj, depth) => {
     const result = obj.map((value) => {
-      if (value.type === 'deleted') {
-        return `${getSpace(depth)}  - ${value.key}: ${stringify(value.oldValue, depth)}`;
-      } if (value.type === 'added') {
-        return `${getSpace(depth)}  + ${value.key}: ${stringify(value.newValue, depth)}`;
-      } if (value.type === 'nested') {
-        return `${getSpace(depth)}    ${value.key}: ${iter(value.children, depth + 1)}`;
-      } if (value.type === 'changed') {
-        return `${getSpace(depth)}  - ${value.key}: ${stringify(value.oldValue, depth)}\n${getSpace(depth)}  + ${value.key}: ${stringify(value.newValue, depth)}`;
+      switch (value.type) {
+        case 'deleted':
+          return `${getSpace(depth)}  - ${value.key}: ${stringify(value.oldValue, depth)}`;
+        case 'added':
+          return `${getSpace(depth)}  + ${value.key}: ${stringify(value.newValue, depth)}`;
+        case 'nested':
+          return `${getSpace(depth)}    ${value.key}: ${iter(value.children, depth + 1)}`;
+        case 'changed':
+          return `${getSpace(depth)}  - ${value.key}: ${stringify(value.oldValue, depth)}\n${getSpace(depth)}  + ${value.key}: ${stringify(value.newValue, depth)}`;
+        default:
+          return `${getSpace(depth)}    ${value.key}: ${stringify(value.oldValue, depth)}`;
       }
-      return `${getSpace(depth)}    ${value.key}: ${stringify(value.oldValue, depth)}`;
     });
     return ['{', ...result, `${getSpace(depth)}}`].join('\n');
   };

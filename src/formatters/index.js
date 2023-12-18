@@ -10,7 +10,7 @@ const diffToFormat = (tree, formatName = 'stylish') => {
     case 'json':
       return JSON.stringify(tree);
     default:
-      throw new Error('Undefined format');
+      throw new Error(`Undefined format: '${formatName}'`);
   }
 };
 export default diffToFormat;

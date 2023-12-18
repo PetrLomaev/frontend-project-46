@@ -14,16 +14,18 @@ const genPlain = (tree) => {
   const iter = (obj, pathName) => {
     const result = obj.flatMap((value) => {
       const fullPathToKey = `${pathName}${value.key}`;
-      if (value.type === 'deleted') {
-        return `Property '${fullPathToKey}' was removed`;
-      } if (value.type === 'added') {
-        return `Property '${fullPathToKey}' was added with value: ${elemToString(value.newValue)}`;
-      } if (value.type === 'nested') {
-        return iter(value.children, `${fullPathToKey}.`);
-      } if (value.type === 'changed') {
-        return `Property '${fullPathToKey}' was updated. From ${elemToString(value.oldValue)} to ${elemToString(value.newValue)}`;
+      switch (value.type) {
+        case 'deleted':
+          return `Property '${fullPathToKey}' was removed`;
+        case 'added':
+          return `Property '${fullPathToKey}' was added with value: ${elemToString(value.newValue)}`;
+        case 'nested':
+          return iter(value.children, `${fullPathToKey}.`);
+        case 'changed':
+          return `Property '${fullPathToKey}' was updated. From ${elemToString(value.oldValue)} to ${elemToString(value.newValue)}`;
+        default:
+          return null;
       }
-      return null;
     });
     return result.filter((elem) => elem !== null).join('\n');
   };
