@@ -1,8 +1,0 @@
-name: test flat file comparison
-on: push
-jobs:
-  my-job:
-    runs-on: ubuntu-latest
-    steps:
-      - name: my-step
-        run: echo "test pass??...."
