@@ -1,5 +1,7 @@
 node_modules/
 
+coverage/
+
 jsconfig.json
 
 hexlet-code-1.0.0.tgz
