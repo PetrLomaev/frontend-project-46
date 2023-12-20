@@ -5,68 +5,68 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/313c723c915c787826eb/maintainability)](https://codeclimate.com/github/PetrLomaev/frontend-project-46/maintainability)
 
 
-[![Test Coverage](https://api.codeclimate.com/v1/badges/313c723c915c787826eb/test_coverage)](https://codeclimate.com/github/PetrLomaev/frontend-project-46/test_coverage)
+
 
 
 ## Описание проекта
 
-Проект содержит в себе программу gendiff, которая сравнивает два конфигурационных файла путём приёма через командную строку двух аргументов — путей до этих файлов. Поддерживает работу форматов файлов: .json, .yml(.yaml).
+The project contains "gendiff" program, which compares two configuration files by receiving two arguments via the command line - the paths to these files. Supports file formats: .json, .yml(.yaml).
 
-Результат сравнения файлов может выводиться в форматах:
+The result of file comparison can be output in the following formats:
 
-- stylish (по умолчанию)
+- stylish (default format)
 
 - plain
 
 - JSON
 
 
-## Минимальные системные требования
+## Minimum System Requirements
 
-Командная строка Node.js
+Node.js Command Line
 
 
-## Установка 
+## Install 
 
-`nmp ci ./bin/gendiff.js`
+`nmp i ./bin/gendiff.js`
 
 `npm link ./bin/gendiff.js`
 
-## Запуск
+## Run
 
-`gendiff -h` - показать справку
+`gendiff -h` - show reference
 
-`gendiff filepath1.json filepath2.json` - показать различия двух файлов в формате "stylish" (формат по умолчанию), где <filepath1.json> и  <filepath2.json> - относительный или абсолютный пути до .json или .yml(.yaml) файла
+`gendiff filepath1.json filepath2.json` - show differences between two files in "stylish" format (default format), where <filepath1.json> and <filepath2.json> are relative or absolute paths to the .json or .yml(.yaml) file
 
-`gendiff --format stylish filepath1.json filepath2.json` - показать различия двух файлов с указанием конкретного вывода в формате "stylish", где <filepath1.json> и  <filepath2.json> - относительный или абсолютный пути до .json или .yml(.yaml) файла.
+`gendiff --format stylish filepath1.json filepath2.json` - show differences between two files, indicating specific output in "stylish" format, where <filepath1.json> and <filepath2.json> are relative or absolute paths to the .json or .yml(.yaml) file.
 
-Вызов с флагом `--format plain` (`-f plain`) выведет различия в формате "plain".
+Call with a flag `--format plain` (`-f plain`) will output differences in format "plain".
 
-Вызов с флагом `--format json` (`-f json`) выведет различия в формате "json".
+Call with a flag `--format json` (`-f json`) will output differences in format "json".
 
 
 
-Посмотреть пример работы программы gendiff с плоскими файлами file1.json file2.json в формате "stylish":
+View an example of the gendiff program working with flat files file1.json file2.json in the "stylish" format:
 
 [![asciicast](https://asciinema.org/a/624803.svg)](https://asciinema.org/a/624803)
 
 
-Посмотреть пример работы программы gendiff с плоскими файлами file1.yaml file2.yaml в формате "stylish":
+View an example of the gendiff program working with flat files file1.yaml file2.yaml in the "stylish" format:
 
 [![asciicast](https://asciinema.org/a/625742.svg)](https://asciinema.org/a/625742)
 
 
-Посмотреть пример работы программы gendiff с вложенными файлами file1.yaml file2.yaml в формате "stylish":
+View an example of the gendiff program working with attached files file1.yaml file2.yaml in the "stylish" format:
 
 [![asciicast](https://asciinema.org/a/627007.svg)](https://asciinema.org/a/627007)
 
 
-Посмотреть пример работы программы gendiff с вложенными файлами file1.yaml file2.yaml в формате "plain":
+View an example of the gendiff program working with attached files file1.yaml file2.yaml in the "plain" format:
 
 [![asciicast](https://asciinema.org/a/627213.svg)](https://asciinema.org/a/627213)
 
 
-Посмотреть пример работы программы gendiff с вложенными файлами file1.yaml file2.yaml в формате "json":
+View an example of the gendiff program working with attached files file1.yaml file2.yaml in the "json" format:
 
 [![asciicast](https://asciinema.org/a/627339.svg)](https://asciinema.org/a/627339)
 
