@@ -5,10 +5,10 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/313c723c915c787826eb/maintainability)](https://codeclimate.com/github/PetrLomaev/frontend-project-46/maintainability)
 
 
+[![Test Coverage](https://api.codeclimate.com/v1/badges/313c723c915c787826eb/test_coverage)](https://codeclimate.com/github/PetrLomaev/frontend-project-46/test_coverage)
 
 
-
-## Описание проекта
+## Project Description
 
 The project contains "gendiff" program, which compares two configuration files by receiving two arguments via the command line - the paths to these files. Supports file formats: .json, .yml(.yaml).
 
@@ -28,9 +28,10 @@ Node.js Command Line
 
 ## Install 
 
-`nmp i ./bin/gendiff.js`
+`git clone git@github.com:PetrLomaev/frontend-project-46.git`
 
-`npm link ./bin/gendiff.js`
+`make install`
+
 
 ## Run
 
